@@ -24,9 +24,8 @@ export default class Team {
   }
 
   * [Symbol.iterator]() {
-    const arr = this.toArray();
-    for (const char of arr) {
-      yield char;
+    for (const member of this.members) {
+      yield member;
     }
   }
 }
